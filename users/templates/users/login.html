@@ -6,19 +6,19 @@
                <!--  supaya aman, harus dipasang setiap post -->
             {% csrf_token %}
             <fieldset class="form-group">
-                <legend class="border-botton mb-4"> Join Today </legend>
+                <legend class="border-botton mb-4"> Log In </legend>
                    <!--  untuk print form , as_p supaya render dalam bentuk paragraph-->
                 <!-- {{form.as_p}} -->
                <!--  | buat filter -->
                 {{ form|crispy }}
             </fieldset>
             <div class="form-group">
-                <button class="btn btn-outline-info" type="submit">Sign Up</button>
+                <button class="btn btn-outline-info" type="submit">Login</button>
             </div>
         </form>
         <div class="border-top pt-3">
             <small class="text muted">
-                Already Have An Account? <a class ="ml-2" href="{% url 'login' %}">Sign In</a>
+                Don't Have An Account? <a class ="ml-2" href="{% url 'register' %}">Sign Up Now</a>
             </small>
         </div>
     </div>
