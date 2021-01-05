@@ -13,8 +13,8 @@ class Profile(models.Model):
         return f"{self.user.username} Profile"
 
     # save super big image
-    def save(self):
-        super().save()
+    def save(self, *args, **kwargs):
+        super(Profile, self).save(*args, **kwargs)
         # resize image
         img = Image.open(self.image.path)
         # 300 pixels x 300 pixels
